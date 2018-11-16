@@ -1,0 +1,324 @@
+			/*
+ * jQuery FlexSlider v2.4.0
+ * http://www.woothemes.com/flexslider/
+ *
+ * Copyright 2012 WooThemes
+ * Free to use under the GPLv2 and later license.
+ * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * Contributing author: Tyler Smith (@mbmufffin)
+ * 
+ */
+			/*
+====================================================================================================================
+ * FONT-FACE
+ * ====================================================================================================================*/
+			/* ====================================================================================================================
+ * RESETS
+ * ====================================================================================================================*/
+			
+			.flex-container a:hover,
+			.flex-slider a:hover,
+			.flex-container a:focus,
+			.flex-slider a:focus {
+			    outline: none;
+			}
+			
+			.slides,
+			.slides>li,
+			.flex-control-nav,
+			.flex-direction-nav {
+			    margin: 0;
+			    padding: 0;
+			    list-style: none;
+			}
+			
+			.flex-pauseplay span {
+			    text-transform: capitalize;
+			}
+			
+			.flexslider .flex-direction-nav a,
+			.flexslider .flex-direction-nav a,
+			.flexslider:hover .flex-direction-nav a,
+			.flexslider:hover .flex-direction-nav a {
+			    display: block;
+			}
+			/* ====================================================================================================================
+ * BASE STYLES
+ * ====================================================================================================================*/
+			
+			.flexslider {
+			    margin: 0;
+			    padding: 0;
+			}
+			
+			.flexslider .slides>li {
+			    display: none;
+			    -webkit-backface-visibility: hidden;
+			}
+			
+			.flexslider .slides img {
+			    width: 100%;
+			    display: block;
+			}
+			
+			.flexslider .slides:after {
+			    content: "\0020";
+			    display: block;
+			    clear: both;
+			    visibility: hidden;
+			    line-height: 0;
+			    height: 0;
+			}
+			
+			html[xmlns] .flexslider .slides {
+			    display: block;
+			}
+			
+			* html .flexslider .slides {
+			    height: 1%;
+			}
+			
+			.no-js .flexslider .slides>li:first-child {
+			    display: block;
+			}
+			/* ====================================================================================================================
+ * DEFAULT THEME
+ * ====================================================================================================================*/
+			
+			.flexslider {
+			    position: relative;
+			    margin: 0 0 30px 0;
+			    //background: $midblue;
+			    border: none;
+			    zoom: 1;
+			    .field {
+			        margin: 0
+			    }
+			}
+			
+			.flexslider .slides {
+			    zoom: 1;
+			    li {
+			        position: relative;
+			    }
+			}
+			
+			.flexslider .slides img {
+			    height: auto;
+			}
+			
+			.flex-viewport {
+			    max-height: 2000px;
+			    -webkit-transition: all 1s ease;
+			    -moz-transition: all 1s ease;
+			    -ms-transition: all 1s ease;
+			    -o-transition: all 1s ease;
+			    transition: all 1s ease;
+			}
+			
+			.loading .flex-viewport {
+			    max-height: 300px;
+			}
+			
+			.carousel li {
+			    margin-right: 5px;
+			}
+			
+			.flex-direction-nav {
+			    *height: 0;
+			}
+			
+			.flex-direction-nav {
+			    a {
+			        color: #fff!important;
+			        filter: alpha(opacity=1);
+			        text-decoration: none;
+			        display: block;
+			        font-size: 0;
+			        width: 20px;
+			        height: auto;
+			        margin: 0;
+			        position: absolute;
+			        top: auto;
+			        bottom: 5px;
+			        z-index: 10;
+			        overflow: hidden;
+			        opacity: 1;
+			        cursor: pointer;
+			        color: #fff;
+			        left: auto;
+			        &:hover {
+			            text-decoration: none!important;
+			        }
+			        text-align: right;
+			        &:before {
+			            @include icon-font('\e801');
+			            font-size: 42px;
+			            line-height: 1;
+			            width: auto;
+			            text-shadow: 0px 0px 2px $darkblue;
+			            &:hover,
+			            &:focus {
+			                text-decoration: none!important;
+			            }
+			            &:focus {
+			                color: red!important;
+			            }
+			        }
+			        &.flex-prev {
+			            right: 35px;
+			            &:before {
+			                content: '\e801';
+			            }
+			        }
+			        &.flex-next {
+			            right: 10px;
+			            &:before {
+			                content: '\e810';
+			            }
+			        }
+			        &:focus {
+			            outline: none;
+			        }
+			    }
+			}
+			
+			.flexslider .flex-prev,
+			.flexslider:hover .flex-prev {
+			    right: 35px;
+			    left: Auto
+			}
+			
+			.flexslider .flex-next,
+			.flexslider:hover .flex-next {
+			    right: 10px;
+			    left: Auto
+			}
+			
+			.flexslider:hover .flex-direction-nav .flex-prev {}
+			
+			.flexslider:hover .flex-direction-nav .flex-prev:hover {
+			    color: #fff;
+			    text-decoration: none;
+			}
+			
+			.flexslider:hover .flex-direction-nav .flex-next {}
+			
+			.flexslider:hover .flex-direction-nav .flex-next:hover {
+			    color: #fff;
+			    text-decoration: none;
+			}
+			
+			.flex-direction-nav .flex-disabled {
+			    opacity: 0!important;
+			    filter: alpha(opacity=0);
+			    cursor: default;
+			}
+			
+			.flex-control-nav {
+			    //background: $midblue;
+			    width: 100%;
+			    text-align: center;
+			    position: absolute;
+			    bottom: 10px;
+			    padding: 0.5em 0 0.25em 0;
+			    li {
+			        zoom: 1;
+			        display: inline-block;
+			        *display: inline-block;
+			        margin: 0;
+			    }
+			}
+			
+			.flexslider {
+			    background: $darkblue;
+			}
+			
+			.flex-control-paging li a {
+			    width: 25px;
+			    height: 25px;
+			    display: block;
+			    background: #fff;
+			    cursor: pointer;
+			    text-indent: -9999px;
+			    margin: 0 5px;
+			    border: 3px #fff solid;
+			    border-radius: 0;
+			    box-shadow: 0px 0px 2px $darkblue;
+			    &:hover {
+			        background: $darkblue;
+			        box-shadow: 0px 0px 2px $darkblue;
+			    }
+			    &.flex-active,
+			    &.flex-active:hover {
+			        background: $midblue;
+			        cursor: default;
+			        border-color: #fff;
+			        box-shadow: 0px 0px 2px $darkblue;
+			    }
+			}
+			
+			.banner-wrapper {
+			    position: absolute;
+			    top: 0;
+			    bottom: 0;
+			    left: 0;
+			    right: auto;
+			    padding: 15px;
+			    max-width: 300px;
+			    @media all and (max-width: 960px) {
+			        max-width: 66%;
+			    }
+			    background: $darkbluetint;
+			    h2 {
+			        font-size: 1.66em;
+			        color: #fff;
+			        margin: 0 0 0.25em 0;
+			    }
+			    p {
+			        font-size: 1em;
+			        line-height: 1.3;
+			        color: #fff;
+			        margin: 0.66em 0;
+			    }
+			    a {
+			        color: #fff!important;
+			    }
+			    .node-readmore {
+			        margin-top: 1em;
+			        a {
+			            border: 1px solid #fff
+			        }
+			    }
+			}
+			
+			@media all and (max-width: 960px) {
+			    .flex-direction-nav {
+			        display: none
+			    }
+			    .flex-control-nav {
+			        //position:relative;
+			        bottom: 0;
+			        right: 15px;
+			        width: auto;
+			        //top:auto;
+			    }
+			}
+			    @media all and (max-width: 768px) {
+			    
+                
+
+                
+                
+			    .banner-wrapper {
+			        position: relative;
+			        bottom: auto;
+			        left: auto;
+			        right: auto;
+			        max-width: 100%;
+			        padding: 15px;
+			        background: $darkblue;
+			        //.node-readmore.left {float:none}
+			    }
+			}

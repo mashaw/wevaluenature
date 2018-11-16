@@ -1,0 +1,153 @@
+// @file
+// Custom sass mixins
+//
+// Define the custom mixins for your project here.
+// http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#defining_a_mixin
+
+// Makes an element visually hidden, but accessible.
+// @see http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+@mixin element-invisible {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+    clip: rect(1px 1px 1px 1px); // IE6 and IE7 use the wrong syntax.
+  }
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+// Turns off the element-invisible effect.
+@mixin element-invisible-off {
+  position: static !important;
+  clip: auto;
+  height: auto;
+  width: auto;
+  overflow: auto;
+}
+
+// Makes an element visually hidden by default, but visible when focused.
+@mixin element-focusable {
+  @include element-invisible;
+  &:active,
+  &:focus {
+    @include element-invisible-off;
+  }
+}
+
+// Brand colours
+
+
+
+$blue:rgb(33, 187, 239);
+$green:rgb(187,209,81);
+$mint:rgb(183,214,143);
+$black:rgb(73,73,72);
+$lightgrey:#cccccc;
+$darkgrey:#818181;
+$verylightgrey:#f5f5f5;
+
+
+//$darkbluetint:rgba(79, 109, 161, 0.5);
+
+
+
+@mixin kill-list() {
+	 .menu  , ul , li {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+}
+
+
+
+
+@mixin buttonhover($colour) {
+	background: $colour;
+	transition: background 0.05s ease 0s;
+	&:hover {text-decoration: none;
+		background: darken($colour, 15%);
+		text-decoration: none!important;
+		cursor: pointer;
+        color:#fff;
+	}
+	&:active {
+		color:#fff!important;
+        background:$black!important;
+		transition: all 0.1s linear;
+		text-decoration: none!important;
+		cursor: pointer;
+        color:#fff;
+	}
+}
+
+
+@mixin btn($fontsize) {
+	    @include prox500;
+    background:$blue;
+	text-transform:uppercase;
+	font-size: $fontsize;
+	color: #fff;
+	border:none;
+	outline:none;
+	display: inline-block;
+    border-radius: 0;
+	padding: 0.33em 0.66em;
+	text-decoration: none!important;
+	@include buttonhover($blue);
+}
+
+
+
+@mixin icon-font($content) {
+	content: $content;
+  //font-family: 'erb_icons';
+	font-size:36px;
+	font-style: normal;
+	font-weight: normal;
+	speak: none;
+	display: inline-block;
+	text-decoration: inherit;
+	width: 1em;
+	text-align: center;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1em;
+	margin: 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+
+ .views-row:last-child hr {display:none}
+
+
+@media (min-width:1200px){
+    .col-lg-1:nth-child(12n+1){clear:left;}
+    .col-lg-2:nth-child(6n+1){clear:left;}
+    .col-lg-3:nth-child(4n+1){clear:left;}
+    .col-lg-4:nth-child(3n+1){clear:left;}
+    .col-lg-6:nth-child(odd){clear:left;}
+}
+@media (min-width:992px) and (max-width:1199px){
+    .col-md-1:nth-child(12n+1){clear:left;}
+    .col-md-2:nth-child(6n+1){clear:left;}
+    .col-md-3:nth-child(4n+1){clear:left;}
+    .col-md-4:nth-child(3n+1){clear:left;}
+    .col-md-6:nth-child(odd){clear:left;}
+}
+@media (min-width:768px) and (max-width:991px){
+    .col-sm-1:nth-child(12n+1){clear:left;}
+    .col-sm-2:nth-child(6n+1){clear:left;}
+    .col-sm-3:nth-child(4n+1){clear:left;}
+    .col-sm-4:nth-child(3n+1){clear:left;}
+    .col-sm-6:nth-child(odd){clear:left;}
+}
+@media (max-width:767px){
+    .col-xs-1:nth-child(12n+1){clear:left;}
+    .col-xs-2:nth-child(6n+1){clear:left;}
+    .col-xs-3:nth-child(4n+1){clear:left;}
+    .col-xs-4:nth-child(3n+1){clear:left;}
+    .col-xs-6:nth-child(odd){clear:left;}
+}

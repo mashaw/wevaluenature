@@ -1,0 +1,130 @@
+// Default variables.
+@import 'component/default-variables';
+
+// Bootstrap Framework.
+//@import '../bootstrap/assets/stylesheets/bootstrap';
+
+// Base-theme overrides.
+//@import 'component/overrides';
+
+@import 'component/mixins';
+
+@import 'component/fonts';
+
+@import 'component/forms';
+
+//@import 'component/images';
+
+@import 'component/navigation';
+
+//@import 'component/flexslider';
+
+
+// Brand colours
+//$blue:rgb(33, 187, 239);
+//$green:rgb(187,209,81);
+//$mint:rgb(183,214,143);
+//$black:rgb(73,73,72);
+//$lightgrey:#cccccc;
+//$darkgrey:#818181;
+//$verylightgrey:#f5f5f5;
+a:link,
+a:visited {
+    color: $blue;
+}
+
+a:hover {
+    color: $black!important;
+    text-decoration: underline;
+}
+
+// ===LAYOUT===//
+
+.dialog-off-canvas-main-canvas {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    .maintenance-page & .main-container ,
+    footer.footer {
+        flex: 1;
+    }
+}  
+
+    
+body {
+    padding: 0;
+    background: $verylightgrey;
+    margin: 0;
+    min-height: 100vh;
+
+}
+
+
+
+.navbar-default {
+    background-color: #fff;
+    padding: 0;
+    margin: 0;
+    border: none;
+    border-radius: 0
+}
+
+.logo.navbar-btn img {
+    width: 300px
+}
+
+.container-fluid {
+    padding: 0 15px;
+    width:100%;
+    @media all and (min-width: 767px) {
+        padding: 0 30px;
+    }
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1200px;
+    background-color: #FFF
+}
+
+header.header,
+footer.footer {
+    background: #fff;
+    width: 100%;
+    padding: 15px 0;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 100%;
+    .container-fluid {
+        background: transparent
+    }
+}
+
+footer.footer_lower,
+footer.footer {
+    //flex: 1 100%;
+    margin: 0;
+    background: $darkgrey;
+    .container-fluid {
+    @media all and (min-width: 1300px) {
+        padding: 0 ;
+    }
+        background: transparent;
+        color: #fff;
+        a:link,
+        a:hover {
+            color: #fff!important;
+        }
+    }
+}
+
+
+.user-pass ,
+.user-login-form {padding-top:30px;
+    padding-bottom:30px;}
+
+footer {}
+
+.region.region-content {
+    @media all and (min-width: 767px) {
+        padding-right: 25%;
+    }
+}

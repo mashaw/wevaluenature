@@ -1,0 +1,341 @@
+//@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i');
+
+//@import url('https://fonts.googleapis.com/css?family=EB+Garamond:700,700i');
+
+@import url('https://use.typekit.net/yuv0kbt.css');
+
+
+
+
+
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "erb_icons";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+ 
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+@mixin prox300 {
+    font-family: proxima-soft, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+@mixin prox400 {
+    font-family: proxima-soft, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@mixin prox500 {
+    font-family: proxima-soft, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+@mixin prox600 {
+    font-family: proxima-soft, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+@mixin prox700 {
+    font-family: proxima-soft, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+@mixin proxcon300 {
+    font-family: proxima-soft-condensed, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+@mixin proxcon300i {
+    font-family: proxima-soft-condensed, sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+@mixin proxcon700 {
+    font-family: proxima-soft-condensed, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+@mixin proxcon700i {
+    font-family: proxima-soft-condensed, sans-serif;
+    font-weight: 600;
+    font-style: italic;
+}
+
+
+
+
+body {
+    @include prox300;
+    color: $black;
+    font-size: 16px;
+    line-height: 1.5;
+    background:#fff;
+    &:not(.cke_editable) {
+        //background: $lightblue;
+    }
+}
+h1,
+h2,
+h3,
+h1 * ,
+h2 * ,
+h3 * {
+    @include prox600;
+}
+.field--label ,
+h4,
+h5,
+h6 {
+    @include prox600;
+}
+
+h1,
+h2,
+h3  {
+    em { 
+        font-style: italic
+    }
+    &.field {
+        margin-bottom: 0;
+    }
+}
+
+
+
+h1,
+.h1 {
+    font-size: 36px;
+}
+
+h2,
+.h2 {
+    font-size: 28px;
+    margin-top: 20px;
+}
+
+h3,
+.h3 {
+    font-size: 21px;
+     margin-top: 15px;
+}
+
+
+
+h1.page-header {
+   // color: $darkblue;
+    border: none;
+    padding: 0;
+    padding-bottom: 9px;
+    margin: 20px 0 20px;
+}
+
+
+.field--label {font-size: 24px;}
+strong,
+b {
+    //@include open-bold;
+
+}
+
+em,
+i {
+    //@include open-reg-italic;
+    //font-weight: normal;
+    //font-style: normal
+}
+
+em strong,
+i b,
+strong em,
+b i,
+{
+    //@include open-bold-italic;
+    //font-weight: normal;
+    //font-style: normal
+}
+
+
+h1 * ,
+h2 * ,
+h3 *  
+ {
+    //@include garamond-bold;
+}
+
+h4 * ,
+h5 * ,
+h6 * {
+    //@include open-bold;
+}
+
+ 
+h1 em,
+h2 em,
+h3 em {
+
+    //@include garamond-bold-italic;
+}
+
+h4 em,
+h5 em,
+h6 em {
+
+    //@include open-bold-italic;
+}
+
+ol,
+ul {
+    padding-left: 2em
+}
+
+
+
+
+//.field--name-body ul:not(.check-boxes) {
+//    padding-left: 3em;
+//    li {
+//        list-style: none;
+//        text-indent: -3em;
+//        &:before {
+//            content: "●";
+//            color: $blue;
+//        }
+//    }
+//}
+
+p,
+.field {
+    margin: 0 0 1em 0
+}
+.field li:last-child 
+.field p:last-child {
+    margin-bottom: 0
+}
+
+hr {
+    clear: both;
+    float: none;
+    border:none;
+    border: $black 2px solid
+}
+
+
+blockquote {
+    margin: 0;
+    font-size: inherit;
+    border: none;
+    border: none;
+    background: $mint;
+    @include proxcon300i;
+    p,
+    li {
+        line-height: inherit
+    }
+}
+
+
+//.btn-primary {
+//    color: #fff;
+//    background-color: $blue;
+//    border-color: $blue;
+//}
+
+
+/*/  ===  Link types === /*/
+:not(.block-image)> {
+    a[target="_blank"],
+    a[href$=".xls"],
+    a[href$=".xlsx"],
+    a[href$=".ppt"],
+    a[href$=".doc"],
+    a[href$=".docx"],
+    a[href$=".pdf"],
+    a[href$=".gz"],
+    a[href$=".tar"],
+    a[href$=".zip"],
+    a[href$=".zipx"],
+    a[href$=".txt"] {
+        &:after {
+            @include icon-font('\f1c1');
+            font-family: 'file_type_icons';
+            font-size: 1.2em;
+            text-decoration: none;
+            margin: 0 0 0 0.15em;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+    a[target="_blank"] {
+        &:after {
+            content: '\f08e';
+        }
+    }
+    a[href$=".doc"],
+    a[href$=".docx"] {
+        &:after {
+            content: '\f1c2';
+        }
+    }
+    a[href$=".xls"],
+    a[href$=".xlsx"] {
+        &:after {
+            content: '\f1c3';
+        }
+    }
+    a[href$=".ppt"] {
+        &:after {
+            content: '\f1c4';
+        }
+    }
+    a[href$=".gz"],
+    a[href$=".tar"],
+    a[href$=".zip"],
+    a[href$=".zipx"] {
+        &:after {
+            content: '\f1c6';
+        }
+    }
+    a[href$=".txt"] {
+        &:after {
+            content: '\f0f6';
+        }
+    }
+}
+

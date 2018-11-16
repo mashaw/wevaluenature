@@ -1,0 +1,163 @@
+.breadcrumb {
+    font-size: 0.9em;
+    color: #999;
+    padding: 0;
+    margin: 0 0 1em 0;
+    border-top: none;
+    background: #fff;
+    li {
+        a:link,
+        a:visited {
+            color: #999;
+            text-decoration: none!important;
+        }
+        a:hover,
+        a:active {
+            color: #333;
+            text-decoration: underline;
+        }
+    }
+    &>li+li:before {
+        content: "> ";
+        padding: 0 5px;
+        color: #ccc;
+    }
+}
+
+
+
+.navbar-default .navbar-toggle {
+    border: none;
+    border-radius: 0;
+    margin-right: 10px;
+    padding: 10px 10px 6px 4px;
+    .icon-bar {
+        height: 5px;
+        margin: 5px 0;
+        width:36px;
+        background:  $lightgrey;
+        border-radius: 5px;
+    }
+    &:hover ,
+     &:active  {
+        background:transparent!important;
+         cursor:pointer;
+        .icon-bar {
+            background:  $darkgrey;
+        }
+    }
+}
+
+
+.nav-label {
+    @include prox500;
+    color: $darkgrey;
+    text-transform: uppercase;
+    float: right;
+    margin-right: 0.5em;
+    line-height: 51px;
+}
+
+.navbar-toggle {
+    clear: right
+}
+
+.navbar-toggle {
+    display: block;
+}
+
+.nav-label {
+    display: block;
+}
+
+@media all and (max-width: 960px) {
+    .navbar-btn.logo {
+        //width: 150px;
+    }
+}
+
+@media all and (min-width: 768px) {
+    .navbar-toggle {
+        display: none;
+    }
+    .nav-label {
+        display: none
+    }
+}
+
+@media all and (max-width: 767px) {
+    #navbar {
+        position: relative;
+        .navbar-toggle {
+            position: absolute;
+            z-index: 999;
+            top: 0;
+            left: auto;
+            right: 0
+        }
+        #navbar-collapse {
+            background:$verylightgrey;
+            border-bottom: 3px solid $lightgrey;
+            position: absolute;
+            z-index: 899;
+            top: 0;
+            left: 15px;
+            right: 0;
+            .region-navigation-collapsible {
+                padding: 5px 30px;
+            }
+        }
+    }
+}
+
+/*/ === Fancy dancing hamburger === /*/
+
+$speed: 200ms;
+$easing: cubic-bezier(0.7, 0, 0, 0.7);
+
+.navbar-toggle {background: transparent;
+    overflow: hidden;
+    .icon-bar {
+        transition: opacity, transform;
+        transition-duration: $speed;
+        transition-timing-function: $easing;
+    }
+    &:not(.collapsed) {
+        .icon-bar {
+            &:nth-child(2) {
+                transform: translateY(10px) rotate(45deg);
+            }
+            &:nth-child(3) {
+                opacity: 0;
+                transform: translateX(-100%);
+            }
+            &:nth-child(4) {
+                transform: translateY(-10px) rotate(-45deg);
+            }
+        }
+    }
+    &:active {
+        background: transparent;
+    }
+}
+
+
+
+.nav:not(.tabs--primary)>li>a:hover,
+.nav:not(.tabs--primary)>li>a:focus {
+    background: transparent;
+    color: $blue;
+    text-decoration: underline;
+
+}
+
+.nav:not(.tabs--primary)>li.active>a,
+.nav:not(.tabs--primary)>li.active>a:hover,
+.nav:not(.tabs--primary)>li.active>a:focus {
+    background: transparent;
+    @include prox500;
+    cursor: default;
+}
+
+
+
