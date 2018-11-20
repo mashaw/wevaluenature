@@ -131,25 +131,15 @@
   width: 1em;
   margin-right: .2em;
   text-align: center;
-  /* opacity: .8; */
-  /* For safety - reset parent styles, that can break glyph codes*/
   font-variant: normal;
   text-transform: none;
-  /* fix buttons height, for twitter bootstrap */
   line-height: 1em;
-  /* Animation center compensation - margins should be symmetric */
-  /* remove if not needed */
   margin-left: .2em;
-  /* you can be more comfortable with increased icons size */
-  /* font-size: 120%; */
-  /* Font smoothing. That was taken from TWBS */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* Uncomment for 3D effect */
-  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
 
-/* line 103, ../scss/component/_fonts.scss */
+/* line 87, ../scss/component/_fonts.scss */
 body {
   font-family: proxima-soft, sans-serif;
   font-weight: 300;
@@ -160,7 +150,7 @@ body {
   background: #fff;
 }
 
-/* line 113, ../scss/component/_fonts.scss */
+/* line 97, ../scss/component/_fonts.scss */
 h1,
 h2,
 h3,
@@ -172,7 +162,7 @@ h3 * {
   font-style: normal;
 }
 
-/* line 121, ../scss/component/_fonts.scss */
+/* line 105, ../scss/component/_fonts.scss */
 .field--label,
 h4,
 h5,
@@ -182,40 +172,40 @@ h6 {
   font-style: normal;
 }
 
-/* line 131, ../scss/component/_fonts.scss */
+/* line 115, ../scss/component/_fonts.scss */
 h1 em,
 h2 em,
 h3 em {
   font-style: italic;
 }
-/* line 134, ../scss/component/_fonts.scss */
+/* line 118, ../scss/component/_fonts.scss */
 h1.field,
 h2.field,
 h3.field {
   margin-bottom: 0;
 }
 
-/* line 141, ../scss/component/_fonts.scss */
+/* line 125, ../scss/component/_fonts.scss */
 h1,
 .h1 {
   font-size: 36px;
 }
 
-/* line 146, ../scss/component/_fonts.scss */
+/* line 130, ../scss/component/_fonts.scss */
 h2,
 .h2 {
   font-size: 28px;
-  margin-top: 20px;
+  margin: 15px 0 15px 0;
 }
 
-/* line 152, ../scss/component/_fonts.scss */
+/* line 136, ../scss/component/_fonts.scss */
 h3,
 .h3 {
   font-size: 21px;
   margin-top: 15px;
 }
 
-/* line 160, ../scss/component/_fonts.scss */
+/* line 144, ../scss/component/_fonts.scss */
 h1.page-header {
   border: none;
   padding: 0;
@@ -223,41 +213,43 @@ h1.page-header {
   margin: 20px 0 20px;
 }
 
-/* line 169, ../scss/component/_fonts.scss */
+/* line 153, ../scss/component/_fonts.scss */
 .field--label {
   font-size: 24px;
 }
 
-/* line 222, ../scss/component/_fonts.scss */
+/* line 206, ../scss/component/_fonts.scss */
 ol,
 ul {
   padding-left: 2em;
 }
 
-/* line 242, ../scss/component/_fonts.scss */
+/* line 226, ../scss/component/_fonts.scss */
 p,
 .field {
   margin: 0 0 1em 0;
 }
 
-/* line 246, ../scss/component/_fonts.scss */
+/* line 230, ../scss/component/_fonts.scss */
 .field li:last-child
 .field p:last-child {
   margin-bottom: 0;
 }
 
-/* line 251, ../scss/component/_fonts.scss */
+/* line 235, ../scss/component/_fonts.scss */
 hr {
+  margin: 15px 0;
   clear: both;
   float: none;
   border: none;
-  border: #494948 2px solid;
+  border: #cccccc 2px solid;
 }
 
-/* line 259, ../scss/component/_fonts.scss */
+/* line 243, ../scss/component/_fonts.scss */
 blockquote {
-  margin: 0;
+  margin: 0 0 10px 0;
   font-size: inherit;
+  padding: 3px 10px  5px 10px;
   border: none;
   border: none;
   background: #b7d68f;
@@ -265,14 +257,26 @@ blockquote {
   font-weight: 300;
   font-style: italic;
 }
-/* line 266, ../scss/component/_fonts.scss */
+/* line 251, ../scss/component/_fonts.scss */
 blockquote p,
 blockquote li {
+  margin: 0 0 6px 0;
   line-height: inherit;
+}
+/* line 255, ../scss/component/_fonts.scss */
+blockquote p:last-child,
+blockquote li:last-child {
+  margin-bottom: 0;
+}
+/* line 259, ../scss/component/_fonts.scss */
+blockquote h2,
+blockquote h3,
+blockquote h4 {
+  margin: 8px 0 4px 0;
 }
 
 /*/  ===  Link types === /*/
-/* line 294, ../scss/component/_fonts.scss */
+/* line 287, ../scss/component/_fonts.scss */
 :not(.block-image) > a[target="_blank"]:after,
 :not(.block-image) > a[href$=".xls"]:after,
 :not(.block-image) > a[href$=".xlsx"]:after,
@@ -305,7 +309,7 @@ blockquote li {
   text-decoration: none;
   margin: 0 0 0 0.15em;
 }
-/* line 300, ../scss/component/_fonts.scss */
+/* line 293, ../scss/component/_fonts.scss */
 :not(.block-image) > a[target="_blank"]:after:hover,
 :not(.block-image) > a[href$=".xls"]:after:hover,
 :not(.block-image) > a[href$=".xlsx"]:after:hover,
@@ -320,32 +324,32 @@ blockquote li {
 :not(.block-image) > a[href$=".txt"]:after:hover {
   text-decoration: none;
 }
-/* line 306, ../scss/component/_fonts.scss */
+/* line 299, ../scss/component/_fonts.scss */
 :not(.block-image) > a[target="_blank"]:after {
   content: '\f08e';
 }
-/* line 312, ../scss/component/_fonts.scss */
+/* line 305, ../scss/component/_fonts.scss */
 :not(.block-image) > a[href$=".doc"]:after,
 :not(.block-image) > a[href$=".docx"]:after {
   content: '\f1c2';
 }
-/* line 318, ../scss/component/_fonts.scss */
+/* line 311, ../scss/component/_fonts.scss */
 :not(.block-image) > a[href$=".xls"]:after,
 :not(.block-image) > a[href$=".xlsx"]:after {
   content: '\f1c3';
 }
-/* line 323, ../scss/component/_fonts.scss */
+/* line 316, ../scss/component/_fonts.scss */
 :not(.block-image) > a[href$=".ppt"]:after {
   content: '\f1c4';
 }
-/* line 331, ../scss/component/_fonts.scss */
+/* line 324, ../scss/component/_fonts.scss */
 :not(.block-image) > a[href$=".gz"]:after,
 :not(.block-image) > a[href$=".tar"]:after,
 :not(.block-image) > a[href$=".zip"]:after,
 :not(.block-image) > a[href$=".zipx"]:after {
   content: '\f1c6';
 }
-/* line 336, ../scss/component/_fonts.scss */
+/* line 329, ../scss/component/_fonts.scss */
 :not(.block-image) > a[href$=".txt"]:after {
   content: '\f0f6';
 }
@@ -542,14 +546,31 @@ label[for=search-toggler] span {
   color: #ccc;
 }
 
-/* line 29, ../scss/component/_navigation.scss */
+/* line 28, ../scss/component/_navigation.scss */
+header.navbar#navbar {
+  position: relative;
+}
+/* line 30, ../scss/component/_navigation.scss */
+header.navbar#navbar .header-wrapper {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1230px;
+}
+
+/* line 42, ../scss/component/_navigation.scss */
 .navbar-default .navbar-toggle {
   border: none;
   border-radius: 0;
   margin-right: 10px;
   padding: 10px 10px 6px 4px;
 }
-/* line 34, ../scss/component/_navigation.scss */
+/* line 47, ../scss/component/_navigation.scss */
 .navbar-default .navbar-toggle .icon-bar {
   height: 5px;
   margin: 5px 0;
@@ -557,17 +578,17 @@ label[for=search-toggler] span {
   background: #cccccc;
   border-radius: 5px;
 }
-/* line 41, ../scss/component/_navigation.scss */
+/* line 54, ../scss/component/_navigation.scss */
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:active {
   background: transparent !important;
   cursor: pointer;
 }
-/* line 45, ../scss/component/_navigation.scss */
+/* line 58, ../scss/component/_navigation.scss */
 .navbar-default .navbar-toggle:hover .icon-bar, .navbar-default .navbar-toggle:active .icon-bar {
   background: #818181;
 }
 
-/* line 52, ../scss/component/_navigation.scss */
+/* line 65, ../scss/component/_navigation.scss */
 .nav-label {
   font-family: proxima-soft, sans-serif;
   font-weight: 500;
@@ -579,38 +600,38 @@ label[for=search-toggler] span {
   line-height: 51px;
 }
 
-/* line 61, ../scss/component/_navigation.scss */
+/* line 74, ../scss/component/_navigation.scss */
 .navbar-toggle {
   clear: right;
 }
 
-/* line 65, ../scss/component/_navigation.scss */
+/* line 78, ../scss/component/_navigation.scss */
 .navbar-toggle {
   display: block;
 }
 
-/* line 69, ../scss/component/_navigation.scss */
+/* line 82, ../scss/component/_navigation.scss */
 .nav-label {
   display: block;
 }
 
 @media all and (min-width: 768px) {
-  /* line 80, ../scss/component/_navigation.scss */
+  /* line 93, ../scss/component/_navigation.scss */
   .navbar-toggle {
     display: none;
   }
 
-  /* line 83, ../scss/component/_navigation.scss */
+  /* line 96, ../scss/component/_navigation.scss */
   .nav-label {
     display: none;
   }
 }
 @media all and (max-width: 767px) {
-  /* line 89, ../scss/component/_navigation.scss */
+  /* line 102, ../scss/component/_navigation.scss */
   #navbar {
     position: relative;
   }
-  /* line 91, ../scss/component/_navigation.scss */
+  /* line 104, ../scss/component/_navigation.scss */
   #navbar .navbar-toggle {
     position: absolute;
     z-index: 999;
@@ -618,68 +639,124 @@ label[for=search-toggler] span {
     left: auto;
     right: 0;
   }
-  /* line 98, ../scss/component/_navigation.scss */
+  /* line 111, ../scss/component/_navigation.scss */
   #navbar #navbar-collapse {
     background: #f5f5f5;
-    border-bottom: 3px solid #cccccc;
+    background: #fff;
+    border-bottom: 2px solid #cccccc;
     position: absolute;
     z-index: 899;
     top: 0;
-    left: 15px;
+    left: 0;
     right: 0;
   }
-  /* line 106, ../scss/component/_navigation.scss */
+  /* line 120, ../scss/component/_navigation.scss */
   #navbar #navbar-collapse .region-navigation-collapsible {
-    padding: 5px 30px;
+    padding: 5px 75px 5px 0px;
+    margin-left: -15px;
+    margin-right: -15px;
   }
 }
 /*/ === Fancy dancing hamburger === /*/
-/* line 118, ../scss/component/_navigation.scss */
+/* line 133, ../scss/component/_navigation.scss */
 .navbar-toggle {
   background: transparent;
   overflow: hidden;
 }
-/* line 120, ../scss/component/_navigation.scss */
+/* line 135, ../scss/component/_navigation.scss */
 .navbar-toggle .icon-bar {
   transition: opacity, transform;
   transition-duration: 200ms;
   transition-timing-function: cubic-bezier(0.7, 0, 0, 0.7);
 }
-/* line 127, ../scss/component/_navigation.scss */
+/* line 142, ../scss/component/_navigation.scss */
 .navbar-toggle:not(.collapsed) .icon-bar:nth-child(2) {
   transform: translateY(10px) rotate(45deg);
 }
-/* line 130, ../scss/component/_navigation.scss */
+/* line 145, ../scss/component/_navigation.scss */
 .navbar-toggle:not(.collapsed) .icon-bar:nth-child(3) {
   opacity: 0;
   transform: translateX(-100%);
 }
-/* line 134, ../scss/component/_navigation.scss */
+/* line 149, ../scss/component/_navigation.scss */
 .navbar-toggle:not(.collapsed) .icon-bar:nth-child(4) {
   transform: translateY(-10px) rotate(-45deg);
 }
-/* line 139, ../scss/component/_navigation.scss */
+/* line 154, ../scss/component/_navigation.scss */
 .navbar-toggle:active {
   background: transparent;
 }
 
-/* line 146, ../scss/component/_navigation.scss */
-.nav:not(.tabs--primary) > li > a:hover,
-.nav:not(.tabs--primary) > li > a:focus {
-  background: transparent;
-  color: #21bbef;
-  text-decoration: underline;
+@media all and (min-width: 767px) {
+  /* line 160, ../scss/component/_navigation.scss */
+  #block-views-block-frontpage-block-1 {
+    background: #fff;
+    border-bottom: 2px #cccccc solid;
+  }
+}
+/* line 56, ../scss/component/_mixins.scss */
+#block-views-block-frontpage-block-1 .item-list.menu .menu, #block-views-block-frontpage-block-1 .item-list.menu ul, #block-views-block-frontpage-block-1 .item-list.menu li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/* line 168, ../scss/component/_navigation.scss */
+#block-views-block-frontpage-block-1 .item-list.menu ul li {
+  border-top: 1px solid #cccccc;
+}
+/* line 170, ../scss/component/_navigation.scss */
+#block-views-block-frontpage-block-1 .item-list.menu ul li:first-child {
+  border: none;
+}
+/* line 175, ../scss/component/_navigation.scss */
+#block-views-block-frontpage-block-1 .item-list.menu a {
+  font-family: proxima-soft, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 18px;
+  display: block;
+  text-decoration: none;
+  padding: 15px 15px;
+  transition: background-color 0.1s linear;
+}
+/* line 182, ../scss/component/_navigation.scss */
+#block-views-block-frontpage-block-1 .item-list.menu a:hover {
+  background-color: #dbebc7;
+}
+/* line 184, ../scss/component/_navigation.scss */
+#block-views-block-frontpage-block-1 .item-list.menu a:active {
+  background-color: #21bbef;
+  color: #fff;
+}
+@media all and (min-width: 960px) {
+  /* line 165, ../scss/component/_navigation.scss */
+  #block-views-block-frontpage-block-1 .item-list.menu {
+    padding-right: 25%;
+  }
+}
+@media all and (min-width: 767px) {
+  /* line 190, ../scss/component/_navigation.scss */
+  #block-views-block-frontpage-block-1 .item-list.menu ul {
+    text-align: center;
+    display: flex;
+  }
+  /* line 193, ../scss/component/_navigation.scss */
+  #block-views-block-frontpage-block-1 .item-list.menu ul li {
+    border: none;
+    border-left: 1px solid #cccccc;
+    display: inline-block;
+    flex-grow: 1;
+  }
+  /* line 198, ../scss/component/_navigation.scss */
+  #block-views-block-frontpage-block-1 .item-list.menu ul li a {
+    font-size: 15px;
+    padding: 10px 0;
+  }
 }
 
-/* line 154, ../scss/component/_navigation.scss */
-.nav:not(.tabs--primary) > li.active > a,
-.nav:not(.tabs--primary) > li.active > a:hover,
-.nav:not(.tabs--primary) > li.active > a:focus {
-  background: transparent;
-  font-family: proxima-soft, sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  cursor: default;
+/* line 208, ../scss/component/_navigation.scss */
+.navbar-collapse.collapse.in {
+  padding-bottom: 40px;
 }
 
 /* line 31, ../scss/style.scss */
@@ -794,9 +871,24 @@ footer.footer .container-fluid a:hover {
   padding-bottom: 30px;
 }
 
+/* line 126, ../scss/style.scss */
+.region.region-content {
+  padding-right: 65px;
+}
 @media all and (min-width: 767px) {
   /* line 126, ../scss/style.scss */
   .region.region-content {
     padding-right: 25%;
   }
+}
+
+/* line 133, ../scss/style.scss */
+h2 {
+  margin: 10px 0;
+}
+
+/* line 135, ../scss/style.scss */
+.webform-submission-contact-form {
+  background-color: #dbebc7;
+  padding: 10px 20px;
 }

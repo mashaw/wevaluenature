@@ -124,7 +124,15 @@ footer.footer {
 footer {}
 
 .region.region-content {
+     padding-right: 65px;
     @media all and (min-width: 767px) {
         padding-right: 25%;
     }
+}
+
+h2 {margin: 10px 0;}
+
+.webform-submission-contact-form  {
+    background-color: mix($mint, #fff, 50%);
+    padding: 10px 20px; 
 }
