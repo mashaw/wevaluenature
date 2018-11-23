@@ -75,11 +75,15 @@
     'clearfix',
   ]
 %}
-<article{{ attributes.addClass(classes) }}  id ="page{{ node.id }}">
+<article{{ attributes.addClass(classes) }}  >
+    
+    <a name="page{{ node.id }}"  id="page{{ node.id }}" class="named-achor"></a>
+    
+
 
   {{ title_prefix }}
   {% if not page %}
-    <h2{{ title_attributes }}>
+    <h2 class="node-title" {{ title_attributes }}>
 {{ label }}
     </h2>
   {% endif %}

@@ -12,7 +12,7 @@
  */
 @import url("https://use.typekit.net/yuv0kbt.css");
 /* line 123, ../scss/component/_mixins.scss */
-.views-row:last-child hr {
+.views-row:last-child hr:not(.thin) {
   display: none;
 }
 
@@ -120,26 +120,14 @@
     clear: left;
   }
 }
-/* line 11, ../scss/component/_fonts.scss */
-[class^="icon-"]:before, [class*=" icon-"]:before {
-  font-family: "erb_icons";
-  font-style: normal;
+@font-face {
+  font-family: 'wvn_icons';
+  src: url("font/wvn_icons.eot?58622499");
+  src: url("font/wvn_icons.eot?58622499#iefix") format("embedded-opentype"), url("font/wvn_icons.woff2?58622499") format("woff2"), url("font/wvn_icons.woff?58622499") format("woff"), url("font/wvn_icons.ttf?58622499") format("truetype"), url("font/wvn_icons.svg?58622499#wvn_icons") format("svg");
   font-weight: normal;
-  speak: none;
-  display: inline-block;
-  text-decoration: inherit;
-  width: 1em;
-  margin-right: .2em;
-  text-align: center;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1em;
-  margin-left: .2em;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
 }
-
-/* line 87, ../scss/component/_fonts.scss */
+/* line 99, ../scss/component/_fonts.scss */
 body {
   font-family: proxima-soft, sans-serif;
   font-weight: 300;
@@ -150,7 +138,7 @@ body {
   background: #fff;
 }
 
-/* line 97, ../scss/component/_fonts.scss */
+/* line 109, ../scss/component/_fonts.scss */
 h1,
 h2,
 h3,
@@ -162,7 +150,7 @@ h3 * {
   font-style: normal;
 }
 
-/* line 105, ../scss/component/_fonts.scss */
+/* line 117, ../scss/component/_fonts.scss */
 .field--label,
 h4,
 h5,
@@ -172,40 +160,51 @@ h6 {
   font-style: normal;
 }
 
-/* line 115, ../scss/component/_fonts.scss */
+/* line 127, ../scss/component/_fonts.scss */
 h1 em,
 h2 em,
 h3 em {
   font-style: italic;
 }
-/* line 118, ../scss/component/_fonts.scss */
+/* line 130, ../scss/component/_fonts.scss */
 h1.field,
 h2.field,
 h3.field {
   margin-bottom: 0;
 }
 
-/* line 125, ../scss/component/_fonts.scss */
+/* line 137, ../scss/component/_fonts.scss */
 h1,
 .h1 {
   font-size: 36px;
 }
 
-/* line 130, ../scss/component/_fonts.scss */
+/* line 144, ../scss/component/_fonts.scss */
 h2,
 .h2 {
   font-size: 28px;
-  margin: 15px 0 15px 0;
+  margin: 10px 0 10px 0;
+}
+/* line 148, ../scss/component/_fonts.scss */
+h2.node-title,
+.h2.node-title {
+  font-size: 32px;
+  margin: 30px 0 25px 0;
 }
 
-/* line 136, ../scss/component/_fonts.scss */
+/* line 157, ../scss/component/_fonts.scss */
+.named-achor {
+  margin-top: 0px;
+}
+
+/* line 159, ../scss/component/_fonts.scss */
 h3,
 .h3 {
   font-size: 21px;
   margin-top: 15px;
 }
 
-/* line 144, ../scss/component/_fonts.scss */
+/* line 167, ../scss/component/_fonts.scss */
 h1.page-header {
   border: none;
   padding: 0;
@@ -213,83 +212,33 @@ h1.page-header {
   margin: 20px 0 20px;
 }
 
-/* line 153, ../scss/component/_fonts.scss */
+/* line 176, ../scss/component/_fonts.scss */
 .field--label {
   font-size: 24px;
 }
 
-/* line 206, ../scss/component/_fonts.scss */
+/* line 229, ../scss/component/_fonts.scss */
 ol,
 ul {
   padding-left: 2em;
 }
 
-/* line 226, ../scss/component/_fonts.scss */
-p,
-.field {
-  margin: 0 0 1em 0;
+/* line 237, ../scss/component/_fonts.scss */
+ul.arrows {
+  padding-left: 0em;
 }
-
-/* line 230, ../scss/component/_fonts.scss */
-.field li:last-child
-.field p:last-child {
-  margin-bottom: 0;
+/* line 239, ../scss/component/_fonts.scss */
+ul.arrows li {
+  list-style: none;
 }
-
-/* line 235, ../scss/component/_fonts.scss */
-hr {
-  margin: 15px 0;
-  clear: both;
-  float: none;
-  border: none;
-  border: #cccccc 2px solid;
+/* line 242, ../scss/component/_fonts.scss */
+ul.arrows li a {
+  font-weight: 600;
 }
-
 /* line 243, ../scss/component/_fonts.scss */
-blockquote {
-  margin: 0 0 10px 0;
-  font-size: inherit;
-  padding: 3px 10px  5px 10px;
-  border: none;
-  border: none;
-  background: #b7d68f;
-  font-family: proxima-soft-condensed, sans-serif;
-  font-weight: 300;
-  font-style: italic;
-}
-/* line 251, ../scss/component/_fonts.scss */
-blockquote p,
-blockquote li {
-  margin: 0 0 6px 0;
-  line-height: inherit;
-}
-/* line 255, ../scss/component/_fonts.scss */
-blockquote p:last-child,
-blockquote li:last-child {
-  margin-bottom: 0;
-}
-/* line 259, ../scss/component/_fonts.scss */
-blockquote h2,
-blockquote h3,
-blockquote h4 {
-  margin: 8px 0 4px 0;
-}
-
-/*/  ===  Link types === /*/
-/* line 287, ../scss/component/_fonts.scss */
-:not(.block-image) > a[target="_blank"]:after,
-:not(.block-image) > a[href$=".xls"]:after,
-:not(.block-image) > a[href$=".xlsx"]:after,
-:not(.block-image) > a[href$=".ppt"]:after,
-:not(.block-image) > a[href$=".doc"]:after,
-:not(.block-image) > a[href$=".docx"]:after,
-:not(.block-image) > a[href$=".pdf"]:after,
-:not(.block-image) > a[href$=".gz"]:after,
-:not(.block-image) > a[href$=".tar"]:after,
-:not(.block-image) > a[href$=".zip"]:after,
-:not(.block-image) > a[href$=".zipx"]:after,
-:not(.block-image) > a[href$=".txt"]:after {
-  content: "";
+ul.arrows li:before {
+  content: "";
+  font-family: 'wvn_icons';
   font-size: 36px;
   font-style: normal;
   font-weight: normal;
@@ -304,53 +253,141 @@ blockquote h4 {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: 'file_type_icons';
+  color: #21bbef;
+  font-size: 14px;
+}
+
+/* line 252, ../scss/component/_fonts.scss */
+p,
+.field {
+  margin: 0 0 1em 0;
+}
+
+/* line 256, ../scss/component/_fonts.scss */
+.field li:last-child
+.field p:last-child {
+  margin-bottom: 0;
+}
+
+/* line 261, ../scss/component/_fonts.scss */
+hr {
+  margin: 15px 0;
+  clear: both;
+  float: none;
+  border: none;
+  border: #cccccc 2px solid;
+}
+/* line 266, ../scss/component/_fonts.scss */
+hr.thin {
+  border-width: 1px;
+}
+
+/* line 270, ../scss/component/_fonts.scss */
+blockquote {
+  margin: 0 0 10px 0;
+  font-size: inherit;
+  padding: 3px 10px  5px 10px;
+  border: none;
+  border: none;
+  background: #b7d68f;
+  font-family: proxima-soft-condensed, sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+/* line 278, ../scss/component/_fonts.scss */
+blockquote p,
+blockquote li {
+  margin: 0 0 6px 0;
+  line-height: inherit;
+}
+/* line 282, ../scss/component/_fonts.scss */
+blockquote p:last-child,
+blockquote li:last-child {
+  margin-bottom: 0;
+}
+/* line 286, ../scss/component/_fonts.scss */
+blockquote h2,
+blockquote h3,
+blockquote h4 {
+  margin: 8px 0 4px 0;
+}
+
+/*/  ===  Link types === /*/
+/* line 314, ../scss/component/_fonts.scss */
+:not(.align-right-50):not(.align-right-25) > a[target="_blank"]:after,
+:not(.align-right-50):not(.align-right-25) > a[href$=".xls"]:after,
+:not(.align-right-50):not(.align-right-25) > a[href$=".xlsx"]:after,
+:not(.align-right-50):not(.align-right-25) > a[href$=".ppt"]:after,
+:not(.align-right-50):not(.align-right-25) > a[href$=".doc"]:after,
+:not(.align-right-50):not(.align-right-25) > a[href$=".docx"]:after,
+:not(.align-right-50):not(.align-right-25) > a[href$=".pdf"]:after,
+:not(.align-right-50):not(.align-right-25) > a[href$=".gz"]:after,
+:not(.align-right-50):not(.align-right-25) > a[href$=".tar"]:after,
+:not(.align-right-50):not(.align-right-25) > a[href$=".zip"]:after,
+:not(.align-right-50):not(.align-right-25) > a[href$=".zipx"]:after,
+:not(.align-right-50):not(.align-right-25) > a[href$=".txt"]:after {
+  content: "";
+  font-family: 'wvn_icons';
+  font-size: 36px;
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   font-size: 1.2em;
   text-decoration: none;
   margin: 0 0 0 0.15em;
 }
-/* line 293, ../scss/component/_fonts.scss */
-:not(.block-image) > a[target="_blank"]:after:hover,
-:not(.block-image) > a[href$=".xls"]:after:hover,
-:not(.block-image) > a[href$=".xlsx"]:after:hover,
-:not(.block-image) > a[href$=".ppt"]:after:hover,
-:not(.block-image) > a[href$=".doc"]:after:hover,
-:not(.block-image) > a[href$=".docx"]:after:hover,
-:not(.block-image) > a[href$=".pdf"]:after:hover,
-:not(.block-image) > a[href$=".gz"]:after:hover,
-:not(.block-image) > a[href$=".tar"]:after:hover,
-:not(.block-image) > a[href$=".zip"]:after:hover,
-:not(.block-image) > a[href$=".zipx"]:after:hover,
-:not(.block-image) > a[href$=".txt"]:after:hover {
+/* line 320, ../scss/component/_fonts.scss */
+:not(.align-right-50):not(.align-right-25) > a[target="_blank"]:after:hover,
+:not(.align-right-50):not(.align-right-25) > a[href$=".xls"]:after:hover,
+:not(.align-right-50):not(.align-right-25) > a[href$=".xlsx"]:after:hover,
+:not(.align-right-50):not(.align-right-25) > a[href$=".ppt"]:after:hover,
+:not(.align-right-50):not(.align-right-25) > a[href$=".doc"]:after:hover,
+:not(.align-right-50):not(.align-right-25) > a[href$=".docx"]:after:hover,
+:not(.align-right-50):not(.align-right-25) > a[href$=".pdf"]:after:hover,
+:not(.align-right-50):not(.align-right-25) > a[href$=".gz"]:after:hover,
+:not(.align-right-50):not(.align-right-25) > a[href$=".tar"]:after:hover,
+:not(.align-right-50):not(.align-right-25) > a[href$=".zip"]:after:hover,
+:not(.align-right-50):not(.align-right-25) > a[href$=".zipx"]:after:hover,
+:not(.align-right-50):not(.align-right-25) > a[href$=".txt"]:after:hover {
   text-decoration: none;
 }
-/* line 299, ../scss/component/_fonts.scss */
-:not(.block-image) > a[target="_blank"]:after {
-  content: '\f08e';
+/* line 326, ../scss/component/_fonts.scss */
+:not(.align-right-50):not(.align-right-25) > a[target="_blank"]:after {
+  content: '\f14c';
 }
-/* line 305, ../scss/component/_fonts.scss */
-:not(.block-image) > a[href$=".doc"]:after,
-:not(.block-image) > a[href$=".docx"]:after {
+/* line 332, ../scss/component/_fonts.scss */
+:not(.align-right-50):not(.align-right-25) > a[href$=".doc"]:after,
+:not(.align-right-50):not(.align-right-25) > a[href$=".docx"]:after {
   content: '\f1c2';
 }
-/* line 311, ../scss/component/_fonts.scss */
-:not(.block-image) > a[href$=".xls"]:after,
-:not(.block-image) > a[href$=".xlsx"]:after {
+/* line 338, ../scss/component/_fonts.scss */
+:not(.align-right-50):not(.align-right-25) > a[href$=".xls"]:after,
+:not(.align-right-50):not(.align-right-25) > a[href$=".xlsx"]:after {
   content: '\f1c3';
 }
-/* line 316, ../scss/component/_fonts.scss */
-:not(.block-image) > a[href$=".ppt"]:after {
+/* line 343, ../scss/component/_fonts.scss */
+:not(.align-right-50):not(.align-right-25) > a[href$=".ppt"]:after {
   content: '\f1c4';
 }
-/* line 324, ../scss/component/_fonts.scss */
-:not(.block-image) > a[href$=".gz"]:after,
-:not(.block-image) > a[href$=".tar"]:after,
-:not(.block-image) > a[href$=".zip"]:after,
-:not(.block-image) > a[href$=".zipx"]:after {
+/* line 351, ../scss/component/_fonts.scss */
+:not(.align-right-50):not(.align-right-25) > a[href$=".gz"]:after,
+:not(.align-right-50):not(.align-right-25) > a[href$=".tar"]:after,
+:not(.align-right-50):not(.align-right-25) > a[href$=".zip"]:after,
+:not(.align-right-50):not(.align-right-25) > a[href$=".zipx"]:after {
   content: '\f1c6';
 }
-/* line 329, ../scss/component/_fonts.scss */
-:not(.block-image) > a[href$=".txt"]:after {
+/* line 356, ../scss/component/_fonts.scss */
+:not(.align-right-50):not(.align-right-25) > a[href$=".txt"]:after {
   content: '\f0f6';
 }
 
@@ -518,6 +555,91 @@ label[for=search-toggler] span {
   margin: 0 !important;
 }
 
+/*/  === INLINE IMAGES ===  /*/
+/* line 3, ../scss/component/_images.scss */
+.align-right-50 img,
+.align-right-25 img {
+  float: left;
+  margin: 0 0 15px -33%;
+  clear: right;
+  max-width: 45%;
+  max-width: 27.5%;
+}
+
+/* line 14, ../scss/component/_images.scss */
+.align-right-25 img {
+  padding: 0 10px;
+}
+/* line 18, ../scss/component/_images.scss */
+.align-right-25 img[src*="ICAEW"] {
+  margin-left: -27%;
+  max-width: 17.5%;
+  margin-top: -25px;
+}
+
+/* line 25, ../scss/component/_images.scss */
+.align-full img {
+  float: none;
+  margin: 15px auto;
+  clear: both;
+  display: block;
+  width: auto;
+  max-width: 100%;
+}
+
+@media all and (max-width: 768px) {
+  /* line 34, ../scss/component/_images.scss */
+  .align-right-25 img,
+  .align-right-50 img {
+    float: none;
+    margin: 15px 25%;
+    clear: both;
+    max-width: 50%;
+  }
+
+  /* line 41, ../scss/component/_images.scss */
+  .align-right-25 img {
+    float: none;
+    margin: 15px 35%;
+    clear: both;
+    max-width: 30%;
+  }
+  /* line 46, ../scss/component/_images.scss */
+  .align-right-25 img[src*="ICAEW"] {
+    float: none;
+    margin: 15px 35%;
+    clear: both;
+    max-width: 30%;
+  }
+}
+/*/  ===  Colorbox window === /*/
+/* line 56, ../scss/component/_images.scss */
+#cboxTitle {
+  font-size: 14px;
+}
+/* line 58, ../scss/component/_images.scss */
+#cboxTitle:before {
+  content: "";
+  font-family: 'wvn_icons';
+  font-size: 36px;
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'cn_icons3';
+  font-size: inherit;
+  margin-right: 0.5em;
+}
+
 /* line 1, ../scss/component/_navigation.scss */
 .breadcrumb {
   font-size: 0.9em;
@@ -546,31 +668,57 @@ label[for=search-toggler] span {
   color: #ccc;
 }
 
-/* line 28, ../scss/component/_navigation.scss */
-header.navbar#navbar {
-  position: relative;
-}
-/* line 30, ../scss/component/_navigation.scss */
-header.navbar#navbar .header-wrapper {
+/* line 27, ../scss/component/_navigation.scss */
+header.navbar.navbar-default.container-fluid {
+  background: #fff;
+  background: transparent;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 999;
+}
+@media all and (min-width: 767px) {
+  /* line 27, ../scss/component/_navigation.scss */
+  header.navbar.navbar-default.container-fluid {
+    background: transparent;
+  }
+}
+/* line 43, ../scss/component/_navigation.scss */
+header.navbar.navbar-default.container-fluid .navbar-collapse {
+  border-bottom: 2px #cccccc solid;
+  background: #f5f5f5;
+  background: #fff;
+}
+/* line 47, ../scss/component/_navigation.scss */
+header.navbar.navbar-default.container-fluid .navbar-collapse .header-wrapper {
+  position: relative;
+  max-width: 1200px;
   margin-right: auto;
   margin-left: auto;
-  max-width: 1230px;
+}
+@media all and (min-width: 768px) {
+  /* line 53, ../scss/component/_navigation.scss */
+  header.navbar.navbar-default.container-fluid .navbar-collapse .header-wrapper #block-sociallinks {
+    position: absolute;
+    top: 4px;
+    left: auto;
+    right: 0;
+  }
 }
 
-/* line 42, ../scss/component/_navigation.scss */
+/* line 64, ../scss/component/_navigation.scss */
 .navbar-default .navbar-toggle {
   border: none;
   border-radius: 0;
   margin-right: 10px;
   padding: 10px 10px 6px 4px;
 }
-/* line 47, ../scss/component/_navigation.scss */
+/* line 69, ../scss/component/_navigation.scss */
 .navbar-default .navbar-toggle .icon-bar {
   height: 5px;
   margin: 5px 0;
@@ -578,17 +726,17 @@ header.navbar#navbar .header-wrapper {
   background: #cccccc;
   border-radius: 5px;
 }
-/* line 54, ../scss/component/_navigation.scss */
+/* line 76, ../scss/component/_navigation.scss */
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:active {
   background: transparent !important;
   cursor: pointer;
 }
-/* line 58, ../scss/component/_navigation.scss */
+/* line 80, ../scss/component/_navigation.scss */
 .navbar-default .navbar-toggle:hover .icon-bar, .navbar-default .navbar-toggle:active .icon-bar {
   background: #818181;
 }
 
-/* line 65, ../scss/component/_navigation.scss */
+/* line 85, ../scss/component/_navigation.scss */
 .nav-label {
   font-family: proxima-soft, sans-serif;
   font-weight: 500;
@@ -600,38 +748,34 @@ header.navbar#navbar .header-wrapper {
   line-height: 51px;
 }
 
-/* line 74, ../scss/component/_navigation.scss */
+/* line 94, ../scss/component/_navigation.scss */
 .navbar-toggle {
   clear: right;
 }
 
-/* line 78, ../scss/component/_navigation.scss */
+/* line 98, ../scss/component/_navigation.scss */
 .navbar-toggle {
   display: block;
 }
 
-/* line 82, ../scss/component/_navigation.scss */
+/* line 102, ../scss/component/_navigation.scss */
 .nav-label {
   display: block;
 }
 
 @media all and (min-width: 768px) {
-  /* line 93, ../scss/component/_navigation.scss */
+  /* line 113, ../scss/component/_navigation.scss */
   .navbar-toggle {
     display: none;
   }
 
-  /* line 96, ../scss/component/_navigation.scss */
+  /* line 116, ../scss/component/_navigation.scss */
   .nav-label {
     display: none;
   }
 }
 @media all and (max-width: 767px) {
-  /* line 102, ../scss/component/_navigation.scss */
-  #navbar {
-    position: relative;
-  }
-  /* line 104, ../scss/component/_navigation.scss */
+  /* line 125, ../scss/component/_navigation.scss */
   #navbar .navbar-toggle {
     position: absolute;
     z-index: 999;
@@ -639,59 +783,55 @@ header.navbar#navbar .header-wrapper {
     left: auto;
     right: 0;
   }
-  /* line 111, ../scss/component/_navigation.scss */
+  /* line 132, ../scss/component/_navigation.scss */
   #navbar #navbar-collapse {
-    background: #f5f5f5;
-    background: #fff;
-    border-bottom: 2px solid #cccccc;
     position: absolute;
     z-index: 899;
     top: 0;
     left: 0;
     right: 0;
   }
-  /* line 120, ../scss/component/_navigation.scss */
+  /* line 138, ../scss/component/_navigation.scss */
   #navbar #navbar-collapse .region-navigation-collapsible {
-    padding: 5px 75px 5px 0px;
+    padding: 5px 95px 5px 0px;
     margin-left: -15px;
     margin-right: -15px;
   }
 }
 /*/ === Fancy dancing hamburger === /*/
-/* line 133, ../scss/component/_navigation.scss */
+/* line 152, ../scss/component/_navigation.scss */
 .navbar-toggle {
   background: transparent;
   overflow: hidden;
 }
-/* line 135, ../scss/component/_navigation.scss */
+/* line 154, ../scss/component/_navigation.scss */
 .navbar-toggle .icon-bar {
   transition: opacity, transform;
   transition-duration: 200ms;
   transition-timing-function: cubic-bezier(0.7, 0, 0, 0.7);
 }
-/* line 142, ../scss/component/_navigation.scss */
+/* line 161, ../scss/component/_navigation.scss */
 .navbar-toggle:not(.collapsed) .icon-bar:nth-child(2) {
   transform: translateY(10px) rotate(45deg);
 }
-/* line 145, ../scss/component/_navigation.scss */
+/* line 164, ../scss/component/_navigation.scss */
 .navbar-toggle:not(.collapsed) .icon-bar:nth-child(3) {
   opacity: 0;
   transform: translateX(-100%);
 }
-/* line 149, ../scss/component/_navigation.scss */
+/* line 168, ../scss/component/_navigation.scss */
 .navbar-toggle:not(.collapsed) .icon-bar:nth-child(4) {
   transform: translateY(-10px) rotate(-45deg);
 }
-/* line 154, ../scss/component/_navigation.scss */
+/* line 173, ../scss/component/_navigation.scss */
 .navbar-toggle:active {
   background: transparent;
 }
 
-@media all and (min-width: 767px) {
-  /* line 160, ../scss/component/_navigation.scss */
+@media all and (min-width: 768px) {
+  /* line 179, ../scss/component/_navigation.scss */
   #block-views-block-frontpage-block-1 {
-    background: #fff;
-    border-bottom: 2px #cccccc solid;
+    margin-right: 130px;
   }
 }
 /* line 56, ../scss/component/_mixins.scss */
@@ -700,63 +840,199 @@ header.navbar#navbar .header-wrapper {
   padding: 0;
   list-style: none;
 }
-/* line 168, ../scss/component/_navigation.scss */
+/* line 184, ../scss/component/_navigation.scss */
 #block-views-block-frontpage-block-1 .item-list.menu ul li {
   border-top: 1px solid #cccccc;
 }
-/* line 170, ../scss/component/_navigation.scss */
+/* line 186, ../scss/component/_navigation.scss */
 #block-views-block-frontpage-block-1 .item-list.menu ul li:first-child {
   border: none;
 }
-/* line 175, ../scss/component/_navigation.scss */
+/* line 191, ../scss/component/_navigation.scss */
 #block-views-block-frontpage-block-1 .item-list.menu a {
   font-family: proxima-soft, sans-serif;
   font-weight: 600;
   font-style: normal;
   font-size: 18px;
+  line-height: 1.2;
   display: block;
   text-decoration: none;
-  padding: 15px 15px;
+  padding: 15px 30px;
   transition: background-color 0.1s linear;
 }
-/* line 182, ../scss/component/_navigation.scss */
+/* line 199, ../scss/component/_navigation.scss */
 #block-views-block-frontpage-block-1 .item-list.menu a:hover {
   background-color: #dbebc7;
 }
-/* line 184, ../scss/component/_navigation.scss */
+/* line 201, ../scss/component/_navigation.scss */
 #block-views-block-frontpage-block-1 .item-list.menu a:active {
   background-color: #21bbef;
   color: #fff;
 }
-@media all and (min-width: 960px) {
-  /* line 165, ../scss/component/_navigation.scss */
-  #block-views-block-frontpage-block-1 .item-list.menu {
-    padding-right: 25%;
-  }
-}
-@media all and (min-width: 767px) {
-  /* line 190, ../scss/component/_navigation.scss */
+@media all and (min-width: 768px) {
+  /* line 207, ../scss/component/_navigation.scss */
   #block-views-block-frontpage-block-1 .item-list.menu ul {
     text-align: center;
     display: flex;
   }
-  /* line 193, ../scss/component/_navigation.scss */
+  /* line 210, ../scss/component/_navigation.scss */
   #block-views-block-frontpage-block-1 .item-list.menu ul li {
     border: none;
     border-left: 1px solid #cccccc;
     display: inline-block;
     flex-grow: 1;
   }
-  /* line 198, ../scss/component/_navigation.scss */
+  /* line 215, ../scss/component/_navigation.scss */
   #block-views-block-frontpage-block-1 .item-list.menu ul li a {
     font-size: 15px;
     padding: 10px 0;
   }
 }
 
-/* line 208, ../scss/component/_navigation.scss */
-.navbar-collapse.collapse.in {
-  padding-bottom: 40px;
+/* line 1, ../scss/component/_social_links.scss */
+#block-sociallinks,
+#block-sociallinks-2 {
+  margin-bottom: 15px;
+  padding: 0;
+}
+@media all and (min-width: 768px) {
+  /* line 1, ../scss/component/_social_links.scss */
+  #block-sociallinks,
+  #block-sociallinks-2 {
+    margin: 0;
+  }
+}
+/* line 8, ../scss/component/_social_links.scss */
+#block-sociallinks .menu,
+#block-sociallinks-2 .menu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+}
+@media all and (min-width: 768px) {
+  /* line 8, ../scss/component/_social_links.scss */
+  #block-sociallinks .menu,
+  #block-sociallinks-2 .menu {
+    text-align: right;
+  }
+}
+/* line 16, ../scss/component/_social_links.scss */
+#block-sociallinks .menu li,
+#block-sociallinks-2 .menu li {
+  padding: 0;
+  margin: 0 0 0 0px;
+  displaY: INLINE-BLOCK;
+}
+/* line 21, ../scss/component/_social_links.scss */
+#block-sociallinks .menu li.last,
+#block-sociallinks-2 .menu li.last {
+  margin-right: 0;
+}
+/* line 24, ../scss/component/_social_links.scss */
+#block-sociallinks .menu a,
+#block-sociallinks-2 .menu a {
+  font-family: 'wvn_icons';
+  color: #21bbef;
+  text-indent: 0;
+  displaY: BLOCK;
+  padding: 0;
+  margin: 0;
+  font-size: 0;
+  line-height: 1;
+  text-decoration: none;
+  text-align: center;
+}
+/* line 36, ../scss/component/_social_links.scss */
+#block-sociallinks .menu li a[href*="mailto:info"]:after,
+#block-sociallinks-2 .menu li a[href*="mailto:info"]:after {
+  content: "";
+  font-family: 'wvn_icons';
+  font-size: 36px;
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* line 39, ../scss/component/_social_links.scss */
+#block-sociallinks .menu li a[href*="twitter"]:after,
+#block-sociallinks-2 .menu li a[href*="twitter"]:after {
+  content: "";
+  font-family: 'wvn_icons';
+  font-size: 36px;
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* line 42, ../scss/component/_social_links.scss */
+#block-sociallinks .menu li a[href*="linkedin"]:after,
+#block-sociallinks-2 .menu li a[href*="linkedin"]:after {
+  content: "";
+  font-family: 'wvn_icons';
+  font-size: 36px;
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* line 45, ../scss/component/_social_links.scss */
+#block-sociallinks .menu li a:after,
+#block-sociallinks-2 .menu li a:after {
+  font-size: 45px !important;
+  line-height: 1em !important;
+}
+@media all and (min-width: 768px) {
+  /* line 45, ../scss/component/_social_links.scss */
+  #block-sociallinks .menu li a:after,
+  #block-sociallinks-2 .menu li a:after {
+    font-size: 30px !important;
+  }
+}
+/* line 53, ../scss/component/_social_links.scss */
+#block-sociallinks .menu li a:hover,
+#block-sociallinks-2 .menu li a:hover {
+  color: #21bbef;
+  background: transparent;
+}
+/* line 58, ../scss/component/_social_links.scss */
+#block-sociallinks#block-sociallinks,
+#block-sociallinks-2#block-sociallinks {
+  margin-bottom: 15px;
+}
+@media all and (min-width: 768px) {
+  /* line 58, ../scss/component/_social_links.scss */
+  #block-sociallinks#block-sociallinks,
+  #block-sociallinks-2#block-sociallinks {
+    margin: 0;
+  }
 }
 
 /* line 31, ../scss/style.scss */
@@ -783,15 +1059,22 @@ a:hover {
   flex: 1;
 }
 
-/* line 54, ../scss/style.scss */
+@media all and (min-width: 768px) {
+  /* line 54, ../scss/style.scss */
+  .region.region-header {
+    padding-top: 50px;
+  }
+}
+/* line 62, ../scss/style.scss */
 body {
+  font-size: 18px;
   padding: 0;
   background: #f5f5f5;
   margin: 0;
   min-height: 100vh;
 }
 
-/* line 64, ../scss/style.scss */
+/* line 72, ../scss/style.scss */
 .navbar-default {
   background-color: #fff;
   padding: 0;
@@ -800,12 +1083,12 @@ body {
   border-radius: 0;
 }
 
-/* line 72, ../scss/style.scss */
+/* line 80, ../scss/style.scss */
 .logo.navbar-btn img {
-  width: 300px;
+  width: 250px;
 }
 
-/* line 76, ../scss/style.scss */
+/* line 84, ../scss/style.scss */
 .container-fluid {
   padding: 0 15px;
   width: 100%;
@@ -814,14 +1097,14 @@ body {
   max-width: 1200px;
   background-color: #FFF;
 }
-@media all and (min-width: 767px) {
-  /* line 76, ../scss/style.scss */
+@media all and (min-width: 768px) {
+  /* line 84, ../scss/style.scss */
   .container-fluid {
     padding: 0 30px;
   }
 }
 
-/* line 88, ../scss/style.scss */
+/* line 96, ../scss/style.scss */
 header.header,
 footer.footer {
   background: #fff;
@@ -831,64 +1114,131 @@ footer.footer {
   margin-left: auto;
   max-width: 100%;
 }
-/* line 96, ../scss/style.scss */
+/* line 104, ../scss/style.scss */
 header.header .container-fluid,
 footer.footer .container-fluid {
   background: transparent;
 }
 
-/* line 101, ../scss/style.scss */
+/* line 108, ../scss/style.scss */
 footer.footer_lower,
 footer.footer {
   margin: 0;
   background: #818181;
 }
-/* line 106, ../scss/style.scss */
+/* line 113, ../scss/style.scss */
 footer.footer_lower .container-fluid,
 footer.footer .container-fluid {
   background: transparent;
   color: #fff;
 }
 @media all and (min-width: 1300px) {
-  /* line 106, ../scss/style.scss */
+  /* line 113, ../scss/style.scss */
   footer.footer_lower .container-fluid,
   footer.footer .container-fluid {
     padding: 0;
   }
 }
-/* line 112, ../scss/style.scss */
+/* line 117, ../scss/style.scss */
+footer.footer_lower .container-fluid .footer-text,
+footer.footer .container-fluid .footer-text {
+  text-align: center;
+}
+@media all and (min-width: 768px) {
+  /* line 117, ../scss/style.scss */
+  footer.footer_lower .container-fluid .footer-text,
+  footer.footer .container-fluid .footer-text {
+    float: none;
+  }
+}
+/* line 123, ../scss/style.scss */
+footer.footer_lower .container-fluid .footer-text p,
+footer.footer .container-fluid .footer-text p {
+  font-size: 14px;
+  line-height: 1.3;
+}
+/* line 130, ../scss/style.scss */
 footer.footer_lower .container-fluid a:link,
 footer.footer_lower .container-fluid a:hover,
 footer.footer .container-fluid a:link,
 footer.footer .container-fluid a:hover {
   color: #fff !important;
+  background: transparent;
+}
+/* line 135, ../scss/style.scss */
+footer.footer_lower .container-fluid a:hover,
+footer.footer .container-fluid a:hover {
+  text-decoration: underline;
+}
+/* line 139, ../scss/style.scss */
+footer.footer_lower #block-sociallinks-2,
+footer.footer #block-sociallinks-2 {
+  float: right;
+}
+/* line 142, ../scss/style.scss */
+footer.footer_lower #block-wevaluenature-account-menu,
+footer.footer #block-wevaluenature-account-menu {
+  float: left;
+}
+/* line 144, ../scss/style.scss */
+footer.footer_lower #block-wevaluenature-account-menu .navbar-nav > li > a,
+footer.footer #block-wevaluenature-account-menu .navbar-nav > li > a {
+  padding: 5px;
 }
 
-/* line 120, ../scss/style.scss */
+/* line 150, ../scss/style.scss */
 .user-pass,
 .user-login-form {
   padding-top: 30px;
   padding-bottom: 30px;
 }
 
-/* line 126, ../scss/style.scss */
-.region.region-content {
-  padding-right: 65px;
-}
-@media all and (min-width: 767px) {
-  /* line 126, ../scss/style.scss */
-  .region.region-content {
-    padding-right: 25%;
-  }
-}
-
-/* line 133, ../scss/style.scss */
-h2 {
-  margin: 10px 0;
-}
-
-/* line 135, ../scss/style.scss */
+/* line 159, ../scss/style.scss */
 .webform-submission-contact-form {
   background-color: #dbebc7;
   padding: 10px 20px;
+}
+/* line 165, ../scss/style.scss */
+.webform-submission-contact-form .form-item-i-understand-and-agree-to-the-privacy-policy .description.help-block {
+  font-size: 16px;
+}
+/* line 167, ../scss/style.scss */
+.webform-submission-contact-form .form-item-i-understand-and-agree-to-the-privacy-policy .description.help-block a:before {
+  content: "";
+  font-family: 'wvn_icons';
+  font-size: 36px;
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #21bbef;
+  font-size: 14px;
+}
+
+/* line 177, ../scss/style.scss */
+.region.region-content {
+  padding-right: 65px;
+}
+/* line 179, ../scss/style.scss */
+.region.region-content .page.is-promoted.teaser {
+  padding-bottom: 30px;
+}
+@media all and (min-width: 768px) {
+  /* line 185, ../scss/style.scss */
+  .region.region-content .page.is-promoted.teaser {
+    padding-left: 25%;
+  }
+}
+/* line 189, ../scss/style.scss */
+.region.region-content hr:not(.thin) {
+  display: none;
 }

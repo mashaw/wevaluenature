@@ -1,31 +1,43 @@
-//@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i');
-
-//@import url('https://fonts.googleapis.com/css?family=EB+Garamond:700,700i');
 
 @import url('https://use.typekit.net/yuv0kbt.css');
 
-
-
-
-
- [class^="icon-"]:before, [class*=" icon-"]:before {
-  font-family: "erb_icons";
-  font-style: normal;
+@font-face {
+  font-family: 'wvn_icons';
+  src: url('font/wvn_icons.eot?58622499');
+  src: url('font/wvn_icons.eot?58622499#iefix') format('embedded-opentype'),
+       url('font/wvn_icons.woff2?58622499') format('woff2'),
+       url('font/wvn_icons.woff?58622499') format('woff'),
+       url('font/wvn_icons.ttf?58622499') format('truetype'),
+       url('font/wvn_icons.svg?58622499#wvn_icons') format('svg');
   font-weight: normal;
-  speak: none;
-  display: inline-block;
-  text-decoration: inherit;
-  width: 1em;
-  margin-right: .2em;
-  text-align: center;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1em;
-  margin-left: .2em;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
+  font-style: normal;
 }
+
+
+
+//.icon-right-open:before { content: '\e802'; } /* '' */
+//.icon-arrows-cw:before { content: '\e804'; } /* '' */
+//.icon-left-open:before { content: '\e805'; } /* '' */
+//.icon-up-open:before { content: '\e806'; } /* '' */
+//.icon-down-open:before { content: '\e807'; } /* '' */
+//.icon-link-ext:before { content: '\f08e'; } /* '' */
+//.icon-twitter:before { content: '\f099'; } /* '' */
+//.icon-linkedin:before { content: '\f0e1'; } /* '' */
+//.icon-doc-text:before { content: '\f0f6'; } /* '' */
+//.icon-link-ext-alt:before { content: '\f14c'; } /* '' */
+//.icon-mail-squared:before { content: '\f199'; } /* '' */
+//.icon-file-pdf:before { content: '\f1c1'; } /* '' */
+//.icon-file-word:before { content: '\f1c2'; } /* '' */
+//.icon-file-excel:before { content: '\f1c3'; } /* '' */
+//.icon-file-powerpoint:before { content: '\f1c4'; } /* '' */
+//.icon-file-image:before { content: '\f1c5'; } /* '' */
+//.icon-file-archive:before { content: '\f1c6'; } /* '' */
+//.icon-file-audio:before { content: '\f1c7'; } /* '' */
+//.icon-file-video:before { content: '\f1c8'; } /* '' */
+//.icon-file-code:before { content: '\f1c9'; } /* '' */
+
+
+
 
 @mixin prox300 {
     font-family: proxima-soft, sans-serif;
@@ -127,11 +139,22 @@ h1,
     font-size: 36px;
 }
 
+
+
 h2,
 .h2 {
     font-size: 28px;
-    margin: 15px 0 15px 0 ;
+    margin: 10px 0 10px 0 ;
+    &.node-title {font-size: 32px;
+    margin: 30px 0 25px 0 ;
+    }
 }
+
+
+
+
+
+.named-achor {margin-top:0px;}
 
 h3,
 .h3 {
@@ -211,17 +234,20 @@ ul {
 
 
 
-//.field--name-body ul:not(.check-boxes) {
-//    padding-left: 3em;
-//    li {
-//        list-style: none;
-//        text-indent: -3em;
-//        &:before {
-//            content: "●";
-//            color: $blue;
-//        }
-//    }
-//}
+ul.arrows {
+    padding-left: 0em;
+    li {
+        list-style: none;
+        //text-indent: -3em;
+        a { font-weight: 600;}
+        &:before {
+            //content: '\e805';
+            @include icon-font('\e802');
+            color: $blue;
+            font-size:14px;
+        }
+    }
+}
 
 p,
 .field {
@@ -236,7 +262,8 @@ hr {margin: 15px 0;
     clear: both;
     float: none;
     border:none;
-    border: $lightgrey 2px solid
+    border: $lightgrey 2px solid;
+    &.thin {border-width: 1px}
 }
 
 
@@ -271,7 +298,7 @@ blockquote {
 
 
 /*/  ===  Link types === /*/
-:not(.block-image)> {
+:not(.align-right-50):not(.align-right-25)> {
     a[target="_blank"],
     a[href$=".xls"],
     a[href$=".xlsx"],
@@ -285,8 +312,8 @@ blockquote {
     a[href$=".zipx"],
     a[href$=".txt"] {
         &:after {
-            @include icon-font('\f1c1');
-            font-family: 'file_type_icons';
+            @include icon-font('\f14c');
+            //font-family: 'file_type_icons';
             font-size: 1.2em;
             text-decoration: none;
             margin: 0 0 0 0.15em;
@@ -297,7 +324,7 @@ blockquote {
     }
     a[target="_blank"] {
         &:after {
-            content: '\f08e';
+            content: '\f14c';
         }
     }
     a[href$=".doc"],

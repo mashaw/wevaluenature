@@ -1,0 +1,64 @@
+    #block-sociallinks,
+#block-sociallinks-2 {
+    margin-bottom: 15px;
+    @media all and (min-width: 768px) {
+        margin: 0;
+    }
+    padding: 0;
+    .menu {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        text-align: center;
+        @media all and (min-width: 768px) {
+            text-align: right;
+        }
+        li {
+            padding: 0;
+            margin: 0 0 0 0px;
+            displaY: INLINE-BLOCK;
+        }
+        li.last {
+            margin-right: 0
+        }
+        a {
+            font-family: 'wvn_icons';
+            color: $blue;
+            text-indent: 0;
+            displaY: BLOCK;
+            padding: 0;
+            margin: 0;
+            font-size: 0;
+            line-height: 1;
+            text-decoration: none;
+            text-align: center;
+        }
+        li a[href*="mailto:info"]:after {
+            @include icon-font('\f199');
+        }
+        li a[href*="twitter"]:after {
+            @include icon-font('\f304');
+        }
+        li a[href*="linkedin"]:after {
+            @include icon-font('\f30c');
+        }
+        li a:after {
+            font-size: 45px!important;
+            @media all and (min-width: 768px) {
+                font-size: 30px!important;
+            }
+            line-height: 1em!important;
+            //padding-left: 0.2em!important;
+        }
+        li a:hover {
+            color: $blue;
+            background: transparent;
+        }
+    }
+    &#block-sociallinks {
+        margin-bottom: 15px;
+        @media all and (min-width: 768px) {
+            margin: 0;
+        }
+    }
+}

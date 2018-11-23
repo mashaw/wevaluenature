@@ -13,11 +13,11 @@
 
 @import 'component/forms';
 
-//@import 'component/images';
+@import 'component/images';
 
 @import 'component/navigation';
 
-//@import 'component/flexslider';
+@import 'component/social_links';
 
 
 // Brand colours
@@ -48,10 +48,18 @@ a:hover {
     footer.footer {
         flex: 1;
     }
-}  
+} 
+
+@media all and (min-width: 768px) {
+    .region.region-header {
+        padding-top:50px;
+    }
+}
+
+
 
     
-body {
+body {font-size:18px;
     padding: 0;
     background: $verylightgrey;
     margin: 0;
@@ -70,13 +78,13 @@ body {
 }
 
 .logo.navbar-btn img {
-    width: 300px
+    width: 250px
 }
 
 .container-fluid {
     padding: 0 15px;
     width:100%;
-    @media all and (min-width: 767px) {
+    @media all and (min-width: 768px) {
         padding: 0 30px;
     }
     margin-right: auto;
@@ -97,42 +105,88 @@ footer.footer {
         background: transparent
     }
 }
-
 footer.footer_lower,
 footer.footer {
     //flex: 1 100%;
     margin: 0;
     background: $darkgrey;
     .container-fluid {
-    @media all and (min-width: 1300px) {
-        padding: 0 ;
-    }
+        @media all and (min-width: 1300px) {
+            padding: 0;
+        }
+        .footer-text {
+            @media all and (min-width: 768px) {
+                float:none;
+                //width: 66%;
+            }
+            text-align: center;
+            p {
+                font-size: 14px;
+                line-height: 1.3;
+            }
+        }
         background: transparent;
         color: #fff;
         a:link,
         a:hover {
             color: #fff!important;
+            background: transparent;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+    #block-sociallinks-2 {
+        float: right;
+    }
+    #block-wevaluenature-account-menu {
+        float: left;
+        .navbar-nav>li>a {
+            padding: 5px
+        }
+    }
+}
+
+.user-pass,
+.user-login-form {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+
+
+
+.webform-submission-contact-form {
+    background-color: mix($mint, #fff, 50%);
+    padding: 10px 20px;
+    @media all and (min-width: 767px) {
+        //margin-left:-25%;
+    }
+    .form-item-i-understand-and-agree-to-the-privacy-policy .description.help-block {
+        font-size: 16px;
+        a:before {
+            //content: '\e805';
+            @include icon-font('\e802');
+            color: $blue;
+            font-size:14px;
         }
     }
 }
 
 
-.user-pass ,
-.user-login-form {padding-top:30px;
-    padding-bottom:30px;}
-
-footer {}
-
 .region.region-content {
-     padding-right: 65px;
-    @media all and (min-width: 767px) {
-        padding-right: 25%;
+    padding-right: 65px;
+    .page.is-promoted.teaser {
+        padding-bottom: 30px;
+        //border: 1px solid orange;
     }
-}
-
-h2 {margin: 10px 0;}
-
-.webform-submission-contact-form  {
-    background-color: mix($mint, #fff, 50%);
-    padding: 10px 20px; 
+    @media all and (min-width: 768px) {
+        //padding-right: 15%;
+        .page.is-promoted.teaser {
+            padding-left: 25%;
+        }
+    }
+    hr:not(.thin) {
+        display: none;
+    }
 }
